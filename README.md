@@ -8,12 +8,6 @@ This implementation is slow and not suitable for large files.
 
 ## Installation
 ```
-pip3 install python-lzrw1-kh
-```
-
-or
-
-```
 pip3 install https://github.com/nmantani/python-lzrw1-kh/archive/refs/heads/master.zip
 ```
 
