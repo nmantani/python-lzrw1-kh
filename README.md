@@ -11,6 +11,12 @@ This implementation is slow and not suitable for large files.
 pip3 install python-lzrw1-kh
 ```
 
+or
+
+```
+pip3 install https://github.com/nmantani/python-lzrw1-kh/archive/refs/heads/master.zip
+```
+
 ## Usage
 lzrw1_kh.compress() and lzrw1_kh.decompress() take bytes as an argument and return compressed / decompressed bytes.
 
