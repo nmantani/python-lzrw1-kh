@@ -1,3 +1,4 @@
-dist
-lzrw1_kh.egg-info
 __pycache__
+*.pyc
+dist
+python_lzrw1_kh.egg-info
