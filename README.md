@@ -20,11 +20,24 @@ lzrw1_kh.compress() and lzrw1_kh.decompress() take bytes as an argument and retu
 b'\x0c\x00@T\x00A\x00\x14B\x00\x14C\x00\x14'
 >>> lzrw1_kh.decompress(b'\x0c\x00@T\x00A\x00\x14B\x00\x14C\x00\x14')
 b'AAAAAAAABBBBBBBBCCCCCCCC'
->>> lzrw1_kh.compress(b'Hello, world!')
-b'\x0e\x00\x80Hello, world!'
->>> lzrw1_kh.decompress(b'\x0e\x00\x80Hello, world!')
-b'Hello, world!'
->>>
+>>> 
+```
+
+```python
+>>> import hashlib
+>>> import lzrw1_kh
+>>> data = b"\x90"*1024
+>>> hashlib.md5(data).hexdigest()
+'e03067ea0b33933f67508ff1f8d0d4d0'
+>>> compressed = lzrw1_kh.compress(data)
+>>> len(compressed)
+9
+>>> decompressed = lzrw1_kh.decompress(compressed)
+>>> len(decompressed)
+1024
+>>> hashlib.md5(decompressed).hexdigest()
+'e03067ea0b33933f67508ff1f8d0d4d0'
+>>> 
 ```
 
 ## Author
